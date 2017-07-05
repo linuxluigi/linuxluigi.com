@@ -1,0 +1,1 @@
+web: gunicorn linuxluigi_com.wsgi

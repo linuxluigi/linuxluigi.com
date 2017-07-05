@@ -1,0 +1,19 @@
+DJANGO_SETTINGS_MODULE=project_name.settings.production
+AWS_ACCESS_KEY_ID = yourKeyId
+AWS_SECRET_ACCESS_KEY = yourAccessKey
+
+# For using RDS DB
+DB_NAME = mydbname
+DB_USER = mydbuser
+DB_PASSWORD = mydbpass
+DB_HOST = xxxx.xxxx.ap-southeast-2.rds.amazonaws.com
+DB_PORT = 5432
+
+# Cloudflare
+CLOUDFLARE_EMAIL = yourCloudflareEmail
+CLOUDFLARE_TOKEN = yourCloudflareToken
+CLOUDFLARE_ZONEID = yourCloudflareZoneid
+
+# AWS ses
+AWS_SES_REGION_NAME = 'us-west-2'
+AWS_SES_REGION_ENDPOINT = 'email.us-west-2.amazonaws.com'
