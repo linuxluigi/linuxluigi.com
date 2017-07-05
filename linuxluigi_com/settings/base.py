@@ -68,7 +68,7 @@ MIDDLEWARE = [
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 
     # Cloudflare
-    "wagtail.contrib.wagtailfrontendcache",
+    #"wagtail.contrib.wagtailfrontendcache",  // tmp deactivate
 ]
 
 ROOT_URLCONF = 'linuxluigi_com.urls'
