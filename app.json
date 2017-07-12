@@ -6,7 +6,7 @@
   "generator": "https://www.expeditedssl.com/heroku-button-maker",
   "env": {
     "SECRET_KEY": "change to something more secure :)",
-    "DJANGO_SETTINGS_MODULE": "BrightnessMonitorWeb.settings.production",
+    "DJANGO_SETTINGS_MODULE": "linuxluigi_com.settings.production",
     "WEB_CONCURRENCY": "2",
     "DISABLE_COLLECTSTATIC": "1"
   },

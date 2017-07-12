@@ -67,6 +67,12 @@ heroku run python manage.py migrate
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/linuxluigi/linuxluigi.com)
 
+Default Admin login when using the deployment button:
+
+* User: ```admin```
+* Password: ```demopass```
+* email: ```admin@example.com```
+
 # Todo
 
 * Add a heroku Button
