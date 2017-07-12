@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'wagtail.wagtailadmin',
     'wagtail.wagtailcore',
 
+    # Wagtail API V2
+    'wagtail.api.v2',
+    'rest_framework',
+
     'modelcluster',
     'taggit',
 
@@ -68,7 +72,7 @@ MIDDLEWARE = [
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
 
     # Cloudflare
-    #"wagtail.contrib.wagtailfrontendcache",  // tmp deactivate
+    # "wagtail.contrib.wagtailfrontendcache",  // tmp deactivate
 ]
 
 ROOT_URLCONF = 'linuxluigi_com.urls'
