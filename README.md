@@ -81,3 +81,4 @@ Default Admin login when using the deployment button:
 * * add Roadmap
 * * add URL Pattern // API - Admin - Wagtail
 * * add Deployment // Heroku
+* * AWS Account settings

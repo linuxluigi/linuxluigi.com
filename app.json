@@ -8,7 +8,10 @@
     "SECRET_KEY": "change to something more secure :)",
     "DJANGO_SETTINGS_MODULE": "linuxluigi_com.settings.production",
     "WEB_CONCURRENCY": "2",
-    "DISABLE_COLLECTSTATIC": "1"
+    "DISABLE_COLLECTSTATIC": "1",
+    "AWS_STORAGE_BUCKET_NAME": "AWS S3 Bucket Name",
+    "AWS_ACCESS_KEY_ID": "AWS ACCESS KEY ID",
+    "AWS_SECRET_ACCESS_KEY": "AWS SECRET ACCESS KEY"
   },
   "scripts": {
     "postdeploy": "django-admin.py migrate && echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'demopass')\" | python manage.py shell"

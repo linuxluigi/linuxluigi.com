@@ -19,7 +19,7 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
 }
 
 # AWS credentials
-AWS_STORAGE_BUCKET_NAME = 'linuxluigi_com_django'
+AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
 AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
 
@@ -54,7 +54,7 @@ DATABASES = {
 }
 """
 
-
+""""
 # Cloudflare
 WAGTAILFRONTENDCACHE = {
     'cloudflare': {
@@ -64,11 +64,12 @@ WAGTAILFRONTENDCACHE = {
         'ZONEID': os.environ['CLOUDFLARE_ZONEID'],
     },
 }
+"""
 
 # AWS ses for sending emails, need to be enabled first
 # EMAIL_BACKEND = 'django_ses.SESBackend'
-AWS_SES_REGION_NAME = os.environ['AWS_SES_REGION_NAME']
-AWS_SES_REGION_ENDPOINT = os.environ['AWS_SES_REGION_ENDPOINT']
+# AWS_SES_REGION_NAME = os.environ['AWS_SES_REGION_NAME']
+# AWS_SES_REGION_ENDPOINT = os.environ['AWS_SES_REGION_ENDPOINT']
 
 try:
     from .local import *
