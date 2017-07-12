@@ -64,3 +64,14 @@ git push heroku master
 
 heroku run python manage.py migrate
 ```
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy?template=https://github.com/linuxluigi/linuxluigi.com)
+
+# Todo
+
+* Add a heroku Button
+* add cloudflare
+* Docs
+* * add Roadmap
+* * add URL Pattern // API - Admin - Wagtail
+* * add Deployment // Heroku

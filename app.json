@@ -1,0 +1,19 @@
+{
+  "name": "Linuxluigi.com",
+  "website": "https://linuxluigi.com/",
+  "repository": "https://github.com/linuxluigi/linuxluigi.com",
+  "success_url": "/admin",
+  "generator": "https://www.expeditedssl.com/heroku-button-maker",
+  "env": {
+    "SECRET_KEY": "change to something more secure :)",
+    "DJANGO_SETTINGS_MODULE": "BrightnessMonitorWeb.settings.production",
+    "WEB_CONCURRENCY": "2",
+    "DISABLE_COLLECTSTATIC": "1"
+  },
+  "scripts": {
+    "postdeploy": "django-admin.py migrate && echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'demopass')\" | python manage.py shell"
+  },
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ]
+}
