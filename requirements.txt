@@ -13,3 +13,7 @@ boto>=2.46.1
 
 # aws ses for email
 django-ses>=0.8.2
+
+# docs
+Sphinx>=1.6.3
+sphinx_rtd_theme==0.2.5b1
