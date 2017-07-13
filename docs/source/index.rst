@@ -10,7 +10,13 @@ Welcome to Linuxluigi.com Website's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+Deployment
+==========
 
+.. toctree::
+   :maxdepth: 2
+
+   deployment
 
 Indices and tables
 ==================

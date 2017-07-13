@@ -14,7 +14,7 @@
     "AWS_SECRET_ACCESS_KEY": "AWS SECRET ACCESS KEY"
   },
   "scripts": {
-    "postdeploy": "django-admin.py migrate && echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'demopass')\" | python manage.py shell"
+    "postdeploy": "django-admin.py collectstatic --noinput && django-admin.py migrate && echo \"from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@example.com', 'demopass')\" | python manage.py shell"
   },
   "addons": [
     "heroku-postgresql:hobby-dev"

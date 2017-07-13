@@ -81,4 +81,5 @@ Default Admin login when using the deployment button:
 * * add Roadmap
 * * add URL Pattern // API - Admin - Wagtail
 * * add Deployment // Heroku
+* * pull git repo from heroku https://kb.heroku.com/why-do-i-see-a-message-you-appear-to-have-cloned-an-empty-repository-when-using-heroku-git-clonecd 
 * * AWS Account settings
