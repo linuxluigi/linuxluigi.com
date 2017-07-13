@@ -14,6 +14,8 @@ Requirements for Heroku.com Hosting
 2. An Account on `aws.amazon.com`_
 3. For the Static & Media Files a S3 Bucket on `aws.amazon.com`_
 
+.. _createNewIamUser:
+
 Create a new IAM User for aws
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -51,6 +53,8 @@ In the Summary page you will see the user ARN, also write it down for using to s
     :target: _static/img/aws/iam/iam-create-06.png
 
 .. _create new IAM user: https://console.aws.amazon.com/iam/home#/users$new?step=details
+
+.. _SetupAS3Bucket:
 
 Setup a S3 Bucket
 ^^^^^^^^^^^^^^^^^
@@ -127,8 +131,20 @@ Policy by Wagtail.io: `Wagtail.io Blog - Amazon S3`_
 
 .. _Wagtail.io Blog - Amazon S3: https://wagtail.io/blog/amazon-s3-for-media-files/
 
+Deploy to Heroku.com
+^^^^^^^^^^^^^^^^^^^^
 
+For easy deployment click on the Heroku Deployment Button, there you will see a pre configured heroku app.
 
+The ``App Name (optional)`` and ``Runtime Selection`` you can change as you like but in the ``Config Variables`` section
+you have to change the ``SECRET_KEY`` to something new (you can use `Django Secret Key Generator`_) and
+``AWS_STORAGE_BUCKET_NAME``, ``AWS_ACCESS_KEY_ID`` & ``AWS SECRET ACCESS KEY`` you have to insert your just created values
+from :ref:`createNewIamUser` & :ref:`SetupAS3Bucket`
+
+.. _Django Secret Key Generator: http://www.miniwebtool.com/django-secret-key-generator/
 
 .. image:: https://www.herokucdn.com/deploy/button.png
     :target: https://heroku.com/deploy?template=https://github.com/linuxluigi/linuxluigi.com
+
+.. image:: _static/img/heroku/deployment-01.png
+    :target: _static/img/heroku/deployment-01.png

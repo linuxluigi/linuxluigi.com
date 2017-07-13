@@ -1,7 +1,6 @@
 # new Linuxluigi.com Website (not online)
 
-AWS Tutorial
-https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
+Documentation: http://linuxluigicom.readthedocs.io/en/latest/
 
 # Local development
 
@@ -21,26 +20,6 @@ Install requirements:
 ```bash
 pip install -r requirements.txt 
 ```
-
-
-# AWS Settings
-
-## S3 - CORS
-
-Example Cors
-
-```xml
-<CORSConfiguration>
-    <CORSRule>
-        <AllowedOrigin>*</AllowedOrigin>
-        <AllowedMethod>GET</AllowedMethod>
-        <MaxAgeSeconds>3000</MaxAgeSeconds>
-        <AllowedHeader>Authorization</AllowedHeader>
-    </CORSRule>
-</CORSConfiguration>
-```
-
-# Deployment
 
 ## Heroku
 
