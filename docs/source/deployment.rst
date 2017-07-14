@@ -148,3 +148,54 @@ from :ref:`createNewIamUser` & :ref:`SetupAS3Bucket`
 
 .. figure:: _static/img/heroku/deployment-01.png
     :target: _static/img/heroku/deployment-01.png
+
+Update the deployed page on Heroku
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+1. Go to `Heroku Dashboard`_ select your new App and click there on ``Deploy``. There stand your App name.
+
+.. _Heroku Dashboard: https://dashboard.heroku.com/apps
+
+2. Download and install the `Heroku CLI`_.
+
+.. code-block:: bash
+
+    $ heroku login
+
+.. _Heroku CLI: https://devcenter.heroku.com/articles/heroku-command-line
+
+3. Clone your repository
+
+.. code-block:: bash
+
+    $ heroku git:clone -a YourAppName
+    $ cd YourAppName
+
+Now there will be display ``warning: You appear to have cloned an empty repository.``. A complete solution for the
+problem is written on `You appear to have cloned an empty repository`_.
+
+.. code-block:: bash
+
+    $ git remote add origin git@github.com:linuxluigi/linuxluigi.com.git
+    $ git pull origin master
+
+.. _You appear to have cloned an empty repository: https://kb.heroku.com/why-do-i-see-a-message-you-appear-to-have-cloned-an-empty-repository-when-using-heroku-git-clone
+
+4. Run development Server
+
+.. code-block:: bash
+
+    $ virtualenv -p python3 venv
+    $ source venv/bin/activate
+    $ pip install -r requirements.txt
+    $ python manage.py migrate
+    $ python manage.py createsuperuser
+    $ python manage.py runserver --settings=linuxluigi_com.settings.dev
+
+5. Deploy your changes
+
+.. code-block:: bash
+
+    $ git add .
+    $ git commit -am "make it better"
+    $ git push heroku master
