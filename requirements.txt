@@ -2,6 +2,9 @@
 Django>=1.11,<1.12
 wagtail>=1.11,<1.12
 
+# api
+django_cors_headers>=2.1.0
+
 # Heroku
 dj-database-url>=0.4.1
 gunicorn>=19.6.0

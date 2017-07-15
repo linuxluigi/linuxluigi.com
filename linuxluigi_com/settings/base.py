@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # Wagtail API V2
     'wagtail.api.v2',
     'rest_framework',
+    'corsheaders',
 
     'modelcluster',
     'taggit',
@@ -70,6 +71,10 @@ MIDDLEWARE = [
 
     'wagtail.wagtailcore.middleware.SiteMiddleware',
     'wagtail.wagtailredirects.middleware.RedirectMiddleware',
+
+    # api cors
+    'corsheaders.middleware.CorsMiddleware',
+    'django.middleware.common.CommonMiddleware',
 
     # Cloudflare
     # "wagtail.contrib.wagtailfrontendcache",  // tmp deactivate
@@ -145,6 +150,8 @@ MEDIA_URL = '/media/'
 # Wagtail settings
 
 WAGTAIL_SITE_NAME = "linuxluigi_com"
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
