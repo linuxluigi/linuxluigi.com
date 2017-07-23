@@ -28,7 +28,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # Application definition
 
 INSTALLED_APPS = [
-    'home',
+    'linuxluigi_angular_theme',
     'search',
 
     'wagtail.wagtailforms',

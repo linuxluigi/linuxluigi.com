@@ -1,6 +1,6 @@
 # core
 Django>=1.11,<1.12
-wagtail>=1.11,<1.12
+wagtail>=1.11.1,<1.12
 
 # api
 django_cors_headers>=2.1.0
