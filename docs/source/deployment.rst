@@ -122,10 +122,25 @@ At next click on ``Bucket Policy`` and write down the following policy.
         ]
     }
 
-Policy by Wagtail.io: `Wagtail.io Blog - Amazon S3`_
+Cors Setup
+
+.. code-block:: xml
+
+    <CORSConfiguration>
+      <CORSRule>
+          <AllowedOrigin>*</AllowedOrigin>
+          <AllowedMethod>GET</AllowedMethod>
+          <MaxAgeSeconds>3000</MaxAgeSeconds>
+          <AllowedHeader>Authorization</AllowedHeader>
+      </CORSRule>
+    </CORSConfiguration>
+
+Policy & Cors by Wagtail.io: `Wagtail.io Blog - Amazon S3`_
 
 .. figure:: _static/img/aws/S3/s3-create-06.png
     :target: _static/img/aws/S3/s3-create-06.png
+
+
 
 .. _create new S3 Bucket: https://console.aws.amazon.com/s3/home
 
